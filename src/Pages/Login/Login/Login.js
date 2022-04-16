@@ -5,6 +5,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocicalLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -31,10 +32,9 @@ const Login = () => {
     }
 
 
-
     return (
-        <div className='container w-50 mx-auto border border-2 rounded mt-5 p-3'>
-            <h2 className='text-primary text-center mt-3 '>Please Login</h2>
+        <div className='container w-50 mx-auto shadow py-5 px-4  rounded mt-2'>
+            <h2 className='text-primary text-center mt-1'>Please Login</h2>
 
             <Form onSubmit={handleSubmit} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -52,6 +52,7 @@ const Login = () => {
                 <Button type='submit' className='w-100 mb-3'>Submit</Button>
                 <p>New to genius Car? <Link to="/register" className='text-decoration-none pe-auto text-danger' onClick={navigateLogin}>Please Register</Link></p>
             </Form>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
