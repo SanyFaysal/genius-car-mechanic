@@ -32,9 +32,18 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} to="/about" className='me-2'>About</Nav.Link>
-                        {user ? <p onClick={handleSignOut} className="text-white my-auto text-opacity-75">Sign out</p> : <Nav.Link as={Link} to="/login">
-                            Login
-                        </Nav.Link>}
+                        {user ?
+                            <>
+                                <Nav.Link as={Link} to="/addServices" className='me-2'>Add</Nav.Link>
+                                <Nav.Link as={Link} to="/manageServices" className='me-2'>Manage</Nav.Link>
+                                <p onClick={handleSignOut} className="text-white my-auto text-opacity-75">Sign out</p>
+
+                            </>
+
+
+                            : <Nav.Link as={Link} to="/login">
+                                Login
+                            </Nav.Link>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

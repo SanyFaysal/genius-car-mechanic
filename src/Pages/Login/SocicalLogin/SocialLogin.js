@@ -44,7 +44,7 @@ const SocialLogin = () => {
                 <div>
                     <button className='btn border-25 border-1 btn-dark'>
                         <img style={{ width: '25px' }} className='me-1' src="https://cdn-icons-png.flaticon.com/512/733/733547.png?w=740" alt="" />
-                        <span className='1'>Fb Signin</span>
+                        <span className='1'>faceSignin</span>
                     </button>
                 </div>
             </div>

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
-
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import SocialLogin from '../SocicalLogin/SocialLogin';
-import { async } from '@firebase/util';
-
+import PageTitle from '../../../Shared/PageTitle/PageTitle';
 
 const Register = () => {
     const [agree, setAgree] = useState(false)
@@ -36,6 +34,7 @@ const Register = () => {
 
     return (
         <div className='register-form shadow mt-1'>
+            <PageTitle title='Register'></PageTitle>
             <div>
                 <h2>Please Register</h2>
                 <form onSubmit={handleRegister}>

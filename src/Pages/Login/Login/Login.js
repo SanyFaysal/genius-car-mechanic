@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import SocialLogin from '../SocicalLogin/SocialLogin';
 import './Login.css'
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import PageTitle from '../../../Shared/PageTitle/PageTitle';
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -56,6 +57,7 @@ const Login = () => {
 
     return (
         <div className='form-container mx-auto shadow py-3 px-4  rounded mt-2'>
+            <PageTitle title='Login'></PageTitle>
             <h2 className='text-primary text-center mt-1'>Please Login</h2>
 
             <Form onSubmit={handleSubmit} >
